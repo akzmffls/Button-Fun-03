@@ -9,13 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var count = 0
 
+    @IBOutlet var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         view.backgroundColor = UIColor.yellow
     }
+    
 
+    @IBAction func buttonPressed(_ sender: Any) {
+        count = count + 1
+        print("\(count)button pressd!!")
+    
+    
+    resultLabel.text = "\(count) button pressed"
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
